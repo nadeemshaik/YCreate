@@ -1,0 +1,29 @@
+info it worked if it ends with ok
+verbose cli [ 'C:\\Program Files (x86)\\NodeJS\\\\node.exe',
+verbose cli   'C:\\Program Files (x86)\\NodeJS\\node_modules\\npm\\bin\\npm-cli.js',
+verbose cli   'install' ]
+info using npm@1.1.0-beta-4
+info using node@v0.6.6
+verbose config file C:\Users\DON\.npmrc
+verbose config file C:\Program Files (x86)\NodeJS\etc\npmrc
+verbose config file C:\Program Files (x86)\NodeJS\node_modules\npm\npmrc
+verbose mkdir done: C:\Users\DON\Downloads\hacku 755
+ERR! Couldn't read dependencies.
+ERR! Failed to parse json
+ERR! Unexpected token {
+ERR! File: C:\Users\DON\Downloads\hacku\package.json
+ERR! JSON.parse Failed to parse package.json data.
+ERR! JSON.parse package.json must be actual JSON, not just JavaScript.
+ERR! JSON.parse This is not a bug in npm.
+ERR! JSON.parse Tell the package author to fix their package.json file.
+ERR! 
+ERR! System Windows_NT 6.1.7601
+ERR! command "C:\\Program Files (x86)\\NodeJS\\\\node.exe" "C:\\Program Files (x86)\\NodeJS\\node_modules\\npm\\bin\\npm-cli.js" "install"
+ERR! cwd C:\Users\DON\Downloads\hacku
+ERR! node -v v0.6.6
+ERR! npm -v 1.1.0-beta-4
+ERR! file C:\Users\DON\Downloads\hacku\package.json
+ERR! code EJSONPARSE
+ERR! message Failed to parse json
+ERR! message Unexpected token {
+verbose exit [ 1, true ]

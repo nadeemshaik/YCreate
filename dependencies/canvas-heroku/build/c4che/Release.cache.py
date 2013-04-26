@@ -1,0 +1,60 @@
+AR = '/usr/bin/ar'
+ARFLAGS = 'rcs'
+CCFLAGS = ['-g', '-O3', '-Wall', '-D_FILE_OFFSET_BITS=64', '-D_LARGEFILE_SOURCE', '-fPIC']
+CCFLAGS_MACBUNDLE = ['-fPIC']
+CCFLAGS_NODE = ['-D_LARGEFILE_SOURCE', '-D_FILE_OFFSET_BITS=64']
+CC_VERSION = ('4', '6', '3')
+COMPILER_CXX = 'g++'
+CPP = '/usr/bin/cpp'
+CPPFLAGS = ['-DNDEBUG', '-DHAVE_GIF=1', '-DHAVE_JPEG=1']
+CPPFLAGS_NODE = ['-D_GNU_SOURCE']
+CPPPATH_CAIRO = ['/usr/local/include/pixman-1', '/usr/local/include/freetype2', '/usr/local/include', '/usr/include/cairo', '/usr/include/glib-2.0', '/usr/lib/i386-linux-gnu/glib-2.0/include', '/usr/include/libpng12']
+CPPPATH_NODE = '/usr/include/nodejs'
+CPPPATH_ST = '-I%s'
+CUSTOM_CAIRO = False
+CXX = ['/usr/bin/g++']
+CXXDEFINES_ST = '-D%s'
+CXXFLAGS = ['-g', '-O3', '-Wall', '-D_FILE_OFFSET_BITS=64', '-D_LARGEFILE_SOURCE', '-fPIC']
+CXXFLAGS_DEBUG = ['-g']
+CXXFLAGS_NODE = ['-D_LARGEFILE_SOURCE', '-D_FILE_OFFSET_BITS=64']
+CXXFLAGS_RELEASE = ['-O2']
+CXXLNK_SRC_F = ''
+CXXLNK_TGT_F = ['-o', '']
+CXX_NAME = 'gcc'
+CXX_SRC_F = ''
+CXX_TGT_F = ['-c', '-o', '']
+DEST_BINFMT = 'elf'
+DEST_CPU = 'x86'
+DEST_OS = 'linux'
+FULLSTATIC_MARKER = '-static'
+HAVE_CAIRO = 1
+LIBDIR = '/home/arpit/.node_libraries'
+LIBPATH_GIF = ['/lib', '/usr/lib', '/usr/local/lib']
+LIBPATH_JPEG = ['/lib', '/usr/lib', '/usr/local/lib']
+LIBPATH_NODE = '/usr/lib'
+LIBPATH_ST = '-L%s'
+LIB_CAIRO = ['cairo']
+LIB_GIF = ['gif']
+LIB_JPEG = ['jpeg']
+LIB_ST = '-l%s'
+LINKFLAGS_MACBUNDLE = ['-bundle', '-undefined', 'dynamic_lookup']
+LINK_CXX = ['/usr/bin/g++']
+NODE_PATH = '/home/arpit/.node_libraries'
+PREFIX = '/usr/local'
+PREFIX_NODE = '/usr'
+RANLIB = '/usr/bin/ranlib'
+RPATH_ST = '-Wl,-rpath,%s'
+SHLIB_MARKER = '-Wl,-Bdynamic'
+SONAME_ST = '-Wl,-h,%s'
+STATICLIBPATH_ST = '-L%s'
+STATICLIB_MARKER = '-Wl,-Bstatic'
+STATICLIB_ST = '-l%s'
+USE_PROFILING = False
+defines = {'HAVE_CAIRO': 1}
+macbundle_PATTERN = '%s.bundle'
+program_PATTERN = '%s'
+shlib_CXXFLAGS = ['-fPIC', '-DPIC']
+shlib_LINKFLAGS = ['-shared']
+shlib_PATTERN = 'lib%s.so'
+staticlib_LINKFLAGS = ['-Wl,-Bstatic']
+staticlib_PATTERN = 'lib%s.a'

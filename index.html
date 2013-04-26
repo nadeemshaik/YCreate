@@ -1,0 +1,144 @@
+<html>
+<head>
+	<title>Y!Create</title>
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="bootstrap/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    	.btttt button{
+    		margin:8px;
+    	}
+    	
+		#in
+		{
+		  -webkit-transition:all 1.0s ease-in-out;
+		  -moz-transition:all 1.0s ease-in-out;
+		  -o-transition:all 1.0s ease-in-out;
+		  transition:all 1.0s ease-in-out;
+		}
+    </style>
+
+</head>
+<body style="background-color:#392c44">
+<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+          <div class="nav-collapse collapse">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+<div class="container-fluid">
+	<div class="row-fluid" style="margin-top:100px;">
+		<div class="offset4 span4" style="text-align:center">
+			<img src="logo.png" style="height:90px;"></div>
+	</div>
+	<div class="row-fluid" style="margin-top:100px;">
+		<div class="span4">
+			
+		</div>
+    <div class="span4 btttt" style="text-align:center">
+    	
+    	<a data-toggle="modal" href="#myModal"  class="btn btn-warning btn-large" style="padding:20px 40px 20px 40px;font-size:20px;"><i class="icon-check icon-white"></i> CREATE</a>
+    	<a data-toggle="modal" href="#myModal2"  class="btn btn-success btn-large" style="padding:20px 60px 20px 60px;font-size:20px;"><i class="icon-road icon-white"></i> JOIN</a></div>
+	</div>	
+	<div class="row-fluid" style="color:#aaa;position:relative;top:150px;">
+    <div class="offset2 span8 desc">
+    	<h2 style="color:#888">About Y!Create</h2>
+    	<p style="color:#ccc;font-family:tahoma;font-size:18px;">
+    		Marissa Mayer, CEO of Yahoo!,  recently announced banning work from home..a reason being the fact that employees can collaborate and discuss better, if they are together. Well now she can take her decision back. We are here with Y!Create (why not create), an online white board app where users can create and join discussion rooms and discuss stuff over the network from their homes.They can draw ideas, diagrams, charts etc. on a common drawing board, view-able and editable by everyone in real time. There is also a chat application for them to discuss their ideas.<br><br>
+
+There is a wide range of use for our hack. For example, it can be used in a school environment for teaching, where the students can interact with the teacher through the board/chat. Friends can study together. It may also be used to play simple games (tic-tac-toe!).
+
+Who will use it:
+Business professionals,
+Teachers,
+Students,
+Online businesses,
+Creative Teams</p>
+    </div>
+	</div>
+</div>
+
+
+<div id="myModal" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+              <h3 id="myModalLabel" style="font-weight:normal">Welcome</h3>
+            </div>
+            <div class="modal-body">
+              <input type="text" id="name" style="height:35px;"class="input-xlarge" placeholder="Enter your Nick">  
+              <div class="id">
+
+              </div>            
+            </div>
+            <div class="modal-footer">
+              <button class="btn" style="float:left;" id="in">FINISH</button>
+              <button class="btn btn-primary" id="gener" style="">SUBMIT</button>
+            </div>
+          </div>
+          <div id="myModal2" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+              <h3 id="myModalLabel" style="font-weight:normal">Welcome</h3>
+            </div>
+            <div class="modal-body">
+              <input type="text" id="nameJoin" style="height:35px;"class="input-xlarge" placeholder="Enter your Nick">
+              <input type="text" id="groupJoin" style="height:35px;"class="input-xlarge" placeholder="Enter Group Id">                
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" id="join" style="">SUBMIT</button>
+            </div>
+          </div>
+          
+          	<script type="text/javascript">
+          			var done = false, myName, myGroup;
+
+			  $('#gener').click(function(){
+			        if(done)return;
+			        if(!$('#name').val()){
+			          $('#name').focus();
+			          return;
+			        }
+			        var genId = String(Math.floor(Math.random()*16777215).toString(16));
+			        console.log(genId);
+			        $('.id').html('<h2>Group Id : '+genId+'</h2>');
+			        done = true;
+			        $(this).css('opacity', 0);
+			        $(this).css('display',"none");
+			        $("#in").addClass("btn-success");
+			        $('#in').css("margin-left",340+"px");
+			        myName = $('#name').val();
+			        myGroup = genId;
+			        // window.location.replace('innerOne.php?name='+myName+'&&group='+myGroup);
+			        });
+			  $('#in').click(function(){
+			  	if(myName && myGroup)
+			  		window.location.replace('innerOne.php?name="'+myName+'"&group="'+myGroup+'"');
+			  });
+	        $('#join').click(function(){
+	              if(!$('#nameJoin').val()){
+	                $('#nameJoin').focus();
+	                return;
+	              }
+	              if(!$('#groupJoin').val()){
+	                $('#groupJoin').focus();
+	                return;
+	              }    
+	              myName = $('#nameJoin').val();
+	              myGroup = $('#groupJoin').val();  
+	              window.location.replace('innerOne.php?name="'+myName+'"&group="'+myGroup+'"');
+
+	        });
+          	</script>
+          
+</body>
+</html>
